@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--ReceivingVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ReceivingVC" customModule="DelegateExercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tcF-ga-gai">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="ReceivingVC" id="Pei-9D-n0q">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ylt-r4-ir2">
+                                            <connections>
+                                                <segue destination="tyE-qm-TLR" kind="show" identifier="showSendingVC" id="PuJ-TE-2JG"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap '+' to send message" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgT-qd-NyI">
+                                <rect key="frame" x="16" y="64" width="288" height="484"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bgT-qd-NyI" secondAttribute="trailing" constant="16" id="QRk-fT-Ueu"/>
+                            <constraint firstItem="tcF-ga-gai" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="adu-L0-0JD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bgT-qd-NyI" secondAttribute="bottom" constant="20" id="dKk-P7-WDC"/>
+                            <constraint firstItem="tcF-ga-gai" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hc3-Wa-E5p"/>
+                            <constraint firstItem="tcF-ga-gai" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="iFf-av-V6g"/>
+                            <constraint firstItem="bgT-qd-NyI" firstAttribute="top" secondItem="tcF-ga-gai" secondAttribute="bottom" constant="20" id="zgO-XB-gL1"/>
+                            <constraint firstItem="bgT-qd-NyI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="zs0-wB-l2N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="receivingLabel" destination="bgT-qd-NyI" id="08N-ph-i0h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82.5" y="132.04225352112675"/>
+        </scene>
+        <!--SendingVC-->
+        <scene sceneID="TR3-pW-4V7">
+            <objects>
+                <viewController id="tyE-qm-TLR" customClass="SendingVC" customModule="DelegateExercise" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8IG-Nl-Iqd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tap to enter message! 👇" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lId-0h-6Yk">
+                                <rect key="frame" x="16" y="70" width="288" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="rsT-Lq-y6V"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="22"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaR-pj-oql">
+                                <rect key="frame" x="16" y="160" width="288" height="60"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="yHQ-zJ-45X"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <state key="normal" title="SEND"/>
+                                <connections>
+                                    <action selector="sendBtnWasPressed:" destination="tyE-qm-TLR" eventType="touchUpInside" id="cQU-Vd-fhU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lId-0h-6Yk" firstAttribute="top" secondItem="4tg-0c-eW9" secondAttribute="top" constant="50" id="KRa-Tk-A7v"/>
+                            <constraint firstItem="4tg-0c-eW9" firstAttribute="trailing" secondItem="eaR-pj-oql" secondAttribute="trailing" constant="16" id="W09-Vu-L22"/>
+                            <constraint firstItem="4tg-0c-eW9" firstAttribute="trailing" secondItem="lId-0h-6Yk" secondAttribute="trailing" constant="16" id="epn-ue-5eC"/>
+                            <constraint firstItem="lId-0h-6Yk" firstAttribute="leading" secondItem="4tg-0c-eW9" secondAttribute="leading" constant="16" id="j0S-oK-hKh"/>
+                            <constraint firstItem="eaR-pj-oql" firstAttribute="top" secondItem="lId-0h-6Yk" secondAttribute="bottom" constant="30" id="rvk-C6-baZ"/>
+                            <constraint firstItem="eaR-pj-oql" firstAttribute="leading" secondItem="4tg-0c-eW9" secondAttribute="leading" constant="16" id="uJr-eN-xvw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4tg-0c-eW9"/>
+                    </view>
+                    <connections>
+                        <outlet property="dataEntryTextField" destination="lId-0h-6Yk" id="73N-l5-Yza"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UvB-Ji-Lk1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="826.875" y="130.98591549295776"/>
+        </scene>
+    </scenes>
+</document>
